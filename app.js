@@ -45,7 +45,10 @@ function addTask() {
 		alert("Add a task");
 	} else {
 		// Get the task from the input and add it to the tasks array
-		let task = textInputCont.value;
+		let task = {
+			text: textInputCont.value,
+			done: false,
+		};
 		tasks.push(task);
 		// Render the updated tasks list
 		render();
