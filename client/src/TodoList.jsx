@@ -13,7 +13,12 @@ const TodoList = () => {
 			setTasks((prevTasks) => [...prevTasks, newtask]);
 		}
 	}
-	function deleteTask(index) {}
+	function deleteTask(index) {
+		const updatedTasks = tasks.filter(
+			(task, i) => i !== index
+		);
+		setTasks(updatedTasks);
+	}
 	function moveTaskUp(index) {}
 	function moveTaskDown(index) {}
 	return (
@@ -35,7 +40,12 @@ const TodoList = () => {
 				{tasks.map((task, i) => (
 					<li key={i}>
 						<span className="text">{task}</span>
-						<button className="delete-btn">Delete</button>
+						<button
+							className="delete-btn"
+							onClick={() => deleteTask(i)}
+						>
+							Delete
+						</button>
 						<button className="move-btn">👆</button>
 						<button className="move-btn">👇</button>
 					</li>
