@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./index.css";
 
 const TodoList = () => {
 	const [tasks, setTasks] = useState([]);
@@ -30,7 +31,12 @@ const TodoList = () => {
 			</div>
 			<ol>
 				{tasks.map((task, i) => (
-					<li key={i}>{task}</li>
+					<li key={i}>
+						<span className="text">{task}</span>
+						<button className="delete-btn">Delete</button>
+						<button className="move-btn">👆</button>
+						<button className="move-btn">👇</button>
+					</li>
 				))}
 			</ol>
 		</div>
