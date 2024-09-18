@@ -3,8 +3,8 @@ body {
 }
 .to-do-list {
 	font-family: Arial, Helvetica, sans-serif;
-	text-align: center;
-	margin-top: 100px;
+	/* text-align: center; */
+	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
