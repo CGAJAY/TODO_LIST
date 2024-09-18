@@ -9,7 +9,9 @@ const TodoList = () => {
 		setNewTask(e.target.value);
 	}
 	function addTask() {
-		setTasks((prevTasks) => [...prevTasks, newtask]);
+		if (newtask.trim() !== "") {
+			setTasks((prevTasks) => [...prevTasks, newtask]);
+		}
 	}
 	function deleteTask(index) {}
 	function moveTaskUp(index) {}
